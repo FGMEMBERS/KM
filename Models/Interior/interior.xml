@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>inttour</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intvitres</object-name>
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/KM/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -43.441 </x-m>
+      <y-m>  -1.100 </y-m>
+      <z-m>  -5.387 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -44.685 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -5.487 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Canopy
+  <animation>
+    <name>IntCanopyTotale</name>
+    <object-name>intcanopy</object-name>
+    <object-name>inttourcanopy</object-name>
+    <object-name>intcanopytrans</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>IntCanopyTotale</object-name>
+    <property>/instrumentation/doors/crew/position-norm</property>
+    <factor>120</factor>
+    <axis>
+      <x1-m> -3.831 </x1-m>
+      <y1-m> -0.365 </y1-m>
+      <z1-m> -0.458 </z1-m>
+      <x2-m> -3.285 </x2-m>
+      <y2-m> -0.386 </y2-m>
+      <z2-m> -0.390 </z2-m>
+    </axis>
+  </animation> -->
+
+</PropertyList>
