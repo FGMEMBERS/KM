@@ -4,7 +4,7 @@
 
   <sim include="Nasal/views.xml">
 
-    <author>BARANGER Emmanuel (3D)</author>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
     <aircraft-version>0.1</aircraft-version>
     <status>Alpha</status>
 
@@ -46,8 +46,8 @@
     <help>
       <title>Caspian Sea Monster</title>
       <key>
-        <name>d</name>
-        <desc>Doors</desc>
+        <name>m/M</name>
+        <desc>Deflectors</desc>
       </key>
     </help>
 

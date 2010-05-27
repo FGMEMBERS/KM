@@ -102,12 +102,15 @@
                  power cruise      : 25000 lbf
                  weight            :
   -->
+  <!-- Interieur gauche -->
   <jet x="39.722" y="5.882" z="-3.599"
        mass="640"
        thrust="25000"
        rotate="-45">
        <actionpt x="35.918" y="5.882" z="-3.599"/>
        <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[0]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[0]/vector-norm"/>
   </jet>
 
   <jet x="39.722" y="7.782" z="-3.599"
@@ -116,6 +119,8 @@
        rotate="-45">
        <actionpt x="35.918" y="7.782" z="-3.599"/>
        <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[1]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[1]/vector-norm"/>
   </jet>
 
   <jet x="39.722" y="9.682" z="-3.599"
@@ -124,22 +129,30 @@
        rotate="-45">
        <actionpt x="35.918" y="9.682" z="-3.599"/>
        <control-input axis="/controls/engines/engine[2]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[2]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[2]/vector-norm"/>
   </jet>
 
+  <!-- Exterieur gauche -->
   <jet x="39.722" y="11.582" z="-3.599"
        mass="640"
        thrust="25000"
        rotate="-45">
        <actionpt x="35.918" y="11.582" z="-3.599"/>
        <control-input axis="/controls/engines/engine[3]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[3]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[3]/vector-norm"/>
   </jet>
 
+  <!-- Interieur droit -->
   <jet x="39.722" y="-5.882" z="-3.599"
        mass="640"
        thrust="25000"
        rotate="-45">
        <actionpt x="35.918" y="-5.882" z="-3.599"/>
        <control-input axis="/controls/engines/engine[4]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[4]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[4]/vector-norm"/>
   </jet>
 
   <jet x="39.722" y="-7.782" z="-3.599"
@@ -148,6 +161,8 @@
        rotate="-45">
        <actionpt x="35.918" y="-7.782" z="-3.599"/>
        <control-input axis="/controls/engines/engine[5]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[5]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[5]/vector-norm"/>
   </jet>
 
   <jet x="39.722" y="-9.682" z="-3.599"
@@ -156,14 +171,19 @@
        rotate="-45">
        <actionpt x="35.918" y="-9.682" z="-3.599"/>
        <control-input axis="/controls/engines/engine[6]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[6]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[6]/vector-norm"/>
   </jet>
 
+  <!-- Exterieur droit -->
   <jet x="39.722" y="-11.582" z="-3.599"
        mass="640"
        thrust="25000"
        rotate="-45">
        <actionpt x="35.918" y="-11.582" z="-3.599"/>
        <control-input axis="/controls/engines/engine[7]/throttle" control="THROTTLE"/>
+       <control-input axis="/controls/engines/engine[7]/mixture" control="VECTOR" src0="-1" src1="1" dst0="-1" dst1="1"/>
+       <control-output control="VECTOR" prop="/engines/engine[7]/vector-norm"/>
   </jet>
 
   <!-- Moteurs arrieres -->

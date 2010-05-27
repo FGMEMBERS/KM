@@ -2,7 +2,7 @@
 
 <PropertyList>
 
-  <chase-distance-m type="double" archive="y">-130.0</chase-distance-m>
+  <chase-distance-m type="double" archive="y"> -130 </chase-distance-m>
 
   <view n="100">
     <name>Tail Camera View</name>
@@ -12,11 +12,27 @@
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <default-field-of-view-deg type="double">30</default-field-of-view-deg>
-      <pitch-offset-deg>-5</pitch-offset-deg>
-      <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
-      <y-offset-m archive="y"> 2.000 </y-offset-m> <!--Up-->
-      <z-offset-m archive="y"> 9.227 </z-offset-m> <!--Back-->
+      <x-offset-m archive="y">  0.000 </x-offset-m>	<!--Right-->
+      <y-offset-m archive="y">  4.749 </y-offset-m>	<!--Up-->
+      <z-offset-m archive="y"> 34.461 </z-offset-m>	<!--Back-->
+      <pitch-offset-deg> -5 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 50 </default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="101">
+    <name>Engines View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <x-offset-m archive="y">  -2.430 </x-offset-m>	<!--Right-->
+      <y-offset-m archive="y">  -3.014 </y-offset-m>	<!--Up-->
+      <z-offset-m archive="y"> -27.099 </z-offset-m>	<!--Back-->
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg type="double"> 50 </default-field-of-view-deg>
     </config>
   </view>
 
@@ -26,7 +42,7 @@
      <x-offset-m archive="y">  -1.100 </x-offset-m>	<!-- Right -->
      <y-offset-m archive="y">  -4.681 </y-offset-m>	<!-- Up    -->
      <z-offset-m archive="y"> -43.487 </z-offset-m>	<!-- Back  -->
-     <pitch-offset-deg> 0 </pitch-offset-deg>
+     <pitch-offset-deg> -10 </pitch-offset-deg>
      <default-field-of-view-deg> 70 </default-field-of-view-deg>
     </config>
   </view>
