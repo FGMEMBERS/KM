@@ -150,7 +150,7 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/KM/Models/Effects/KMreflect</inherits-from>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>supportmoteur</object-name>
     <object-name>ailes</object-name>
