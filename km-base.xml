@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+    <aircraft-version>0.1</aircraft-version>
+    <status>Alpha</status>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <type type="string">seaplane</type>
+
+    <startup>
+      <splash-texture>Aircraft/KM/km-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/KM/Sounds/km-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/KM/Models/km.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <panel>
+      <visibility archive="y">false</visibility>
+    </panel>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+        <int type="int">0</int>
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>Caspian Sea Monster</title>
+      <key>
+        <name>m/M</name>
+        <desc>Deflectors</desc>
+      </key>
+    </help>
+
+  </sim>
+
+  <controls>
+    <flight>
+      <elevator-trim type="double"> 0 </elevator-trim>
+    </flight>
+  </controls>
+
+  <input>
+    <keyboard include="Nasal/km-keyboard.xml"/>
+  </input>
+ 
+  <nasal>
+    <km>
+      <file>Aircraft/KM/Nasal/light.nas</file>
+      <file>Aircraft/KM/Nasal/immat.nas</file>
+      <file>Aircraft/KM/Nasal/liveries.nas</file>
+    </km>
+    <doors>
+      <file>Aircraft/KM/Nasal/doors.nas</file>
+    </doors>    
+  </nasal>
+  
+</PropertyList>
+

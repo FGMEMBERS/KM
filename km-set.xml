@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="km-jsbsim-cnf.xml"> -->
+<PropertyList include="km-yasim-cnf.xml">
+
+  <sim>
+    <description>Caspian Sea Monster</description>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
+  </sim>
+
+</PropertyList>
+

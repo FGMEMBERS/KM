@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="km-base.xml">
+
+  <sim>
+
+    <description>Caspian Sea Monster (YASim)</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">km-yasim</aero>
+
+  </sim>
+ 
+</PropertyList>
