@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -11,5 +11,99 @@
     <!-- Objets transparents -->
   </animation>
 
+  <!-- AI -->
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m>  0.256 </x-m>
+      <y-m> -0.990 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <offsets>
+      <x-m> 0.256 </x-m>
+      <y-m> 0.990 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.252 </x-m>
+      <y-m> -1.113 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.252 </x-m>
+      <y-m> 0.870 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- ALT_M -->
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/alt_m/alt_m.xml</path>
+    <offsets>
+      <x-m>  0.250 </x-m>
+      <y-m> -0.870 </y-m>
+      <z-m>  0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/alt_m/alt_m.xml</path>
+    <offsets>
+      <x-m> 0.252 </x-m>
+      <y-m> 1.113 </y-m>
+      <z-m> 0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.252 </x-m>
+      <y-m> -1.113 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.252 </x-m>
+      <y-m>  0.870 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.251 </x-m>
+      <y-m> -0.870 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/KM/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.251 </x-m>
+      <y-m>  1.113 </y-m>
+      <z-m> -0.060 </z-m>
+    </offsets>
+  </model>
+  
 </PropertyList>
-

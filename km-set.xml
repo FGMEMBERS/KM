@@ -1,12 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="km-jsbsim-cnf.xml"> -->
-<PropertyList include="km-yasim-cnf.xml">
+<PropertyList include="km-base.xml">
 
   <sim>
-    <description>Caspian Sea Monster</description>
+    
+    <description>Caspian Sea Monster (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+    
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">km-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     2 </FDM>
+      <systems type="int"> 0 </systems>
+      <cockpit type="int"> 0 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+    
   </sim>
 
 </PropertyList>
-

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,12 +7,26 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/KM/Models/Liveries", 10);
+      
+      var self = cmdarg();
+      
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+    
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
-
+  
   <animation>
     <!-- Objets opaques -->
     <object-name>fuselage</object-name>
@@ -118,35 +132,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -168,41 +158,37 @@
     <object-name>bols</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/KM/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
-  <!-- Effets de vagues en particules -->
+  </effect>
+  
+  <!-- Une ombre pour OSG -->
   <model>
-    <path>Aircraft/KM/Models/Effects/waves.xml</path>
+    <path>Aircraft/KM/Models/shadow.xml</path>
     <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <x-m>  0 </x-m>
+      <y-m>  0 </y-m>
+      <z-m> -9 </z-m>
     </offsets>
-  </model>
-
+    </model>
+  
   <!-- Interieur -->
   <model>
     <path>Aircraft/KM/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
+  <!-- Effets de vagues en particules -->
+  <model>
+    <path>Aircraft/KM/Models/Effects/Water/waves.xml</path>
+  </model>
+  
   <!-- Rotation des hélices des réacteurs -->
   <!-- Gauche -->
   <animation>
@@ -1079,7 +1065,7 @@
   </model>
 
   <model>
-    <path>Aircraft/KM/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/KM/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -18.811 </x-m>
       <y-m> -19.866 </y-m>
@@ -1097,7 +1083,7 @@
   </model>
 
   <model>
-    <path>Aircraft/KM/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/KM/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -18.811 </x-m>
       <y-m>  19.866 </y-m>

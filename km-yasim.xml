@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!-- Montre de la mer Caspienne : Emmanuel BARANGER    2010
 
@@ -11,7 +11,7 @@
        Max speed    :    550 km/h (     296 kt)
        Engines      : 10 Dobryin VD 7 (25000 lbf each)
 -->
-<airplane mass="1091288">
+<airplane mass="1091288" version="YASIM_VERSION_CURRENT">
 
   <approach speed="45" aoa="4">
     <control-setting axis="/controls/engines/engine[0]/throttle" value="0.7"/>
@@ -43,16 +43,33 @@
 
   <cockpit x="43.487" y="1.100" z="-4.681"/>
 
-  <fuselage ax="50" ay="0" az="-6.659" bx="-39" by="0" bz="-8" width="5.2" taper="0.5" midpoint="0.1"/>
+  <fuselage ax=" 50.000" ay="  0.000" az="-6.659" bx="-39.000" by="  0.000" bz="-8.000" width="5.200" taper="0.5" midpoint="0.1"/>
+  <fuselage ax="-35.224" ay="  0.000" az=" 4.569" bx="-46.898" by="  0.000" bz=" 4.569" width="1.274" taper="0.5" midpoint="0.1"/>
+  
+  <!-- Engines -->
+  <!-- Left -->
+  <fuselage ax=" 42.982" ay=" 11.581" az="-3.599" bx=" 35.925" by=" 11.581" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
+  <fuselage ax=" 42.982" ay="  9.682" az="-3.599" bx=" 35.925" by="  9.682" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
+  <fuselage ax=" 42.982" ay="  7.782" az="-3.599" bx=" 35.925" by="  7.782" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
+  <fuselage ax=" 42.982" ay="  5.882" az="-3.599" bx=" 35.925" by="  5.882" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
+  
+  <fuselage ax="-27.592" ay="  1.653" az=" 0.596" bx="-39.266" by="  1.653" bz=" 0.596" width="1.274" taper="1.0" midpoint="1.0"/>
+  <!-- Rught -->
+  <fuselage ax=" 42.982" ay=" -5.882" az="-3.599" bx=" 35.925" by=" -5.882" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
+  <fuselage ax=" 42.982" ay=" -7.782" az="-3.599" bx=" 35.925" by=" -7.782" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
+  <fuselage ax=" 42.982" ay=" -9.682" az="-3.599" bx=" 35.925" by=" -9.682" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
+  <fuselage ax=" 42.982" ay="-11.581" az="-3.599" bx=" 35.925" by="-11.581" bz="-3.599" width="1.274" taper="1.0" midpoint="1.0"/>
 
+  <fuselage ax="-27.592" ay=" -1.653" az=" 0.596" bx="-39.266" by=" -1.653" bz=" 0.596" width="1.274" taper="1.0" midpoint="1.0"/>
+  
   <wing x="8.893" y="2.305" z="-6.743" 
         chord="22" 
         length="17" 
-        camber="0.01"
         taper="1" 
-        dihedral="-2">
-        <stall aoa="18" width="6" peak="1.5"/>
-        <flap0 start="0.05" end="0.98" lift="1.4" drag="1.4"/>
+        dihedral="-2"
+        camber="0.005">
+        <stall aoa="18" width="1" peak="1.5"/>
+        <flap0 start="0.05" end="0.98" lift="1.3" drag="1.5"/>
         <flap1 start="0.50" end="0.98" lift="1.3" drag="1.2"/>
 
         <control-input axis="/controls/flight/flaps" control="FLAP0"/>
@@ -72,8 +89,8 @@
          taper="0.4" 
          sweep="11"
          dihedral="18">
-         <stall aoa="16" width="2" peak="1.5"/>
-         <flap0 start="0.07" end="0.6" lift="1.8" drag="1.4"/>
+         <stall aoa="16" width="1" peak="1.5"/>
+         <flap0 start="0.07" end="0.6" lift="1.4" drag="1.1"/>
 
          <control-input axis="/controls/flight/elevator" control="FLAP0" />
          <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
@@ -86,8 +103,8 @@
          length="22" 
          taper="0.4" 
          sweep="62">
-         <stall aoa="14" width="3" peak="1.5"/>
-         <flap0 start="0" end="0.9" lift="1.5" drag="1.5"/>
+         <stall aoa="14" width="1" peak="1.5"/>
+         <flap0 start="0" end="0.9" lift="1.2" drag="1.1"/>
 
          <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
          <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
@@ -102,7 +119,7 @@
                  power cruise      : 25000 lbf
                  weight            :
   -->
-  <!-- Interieur gauche -->
+  <!-- Interio left -->
   <jet x="39.722" y="5.882" z="-3.599"
        mass="640"
        thrust="25000"
@@ -133,7 +150,7 @@
        <control-output control="VECTOR" prop="/engines/engine[2]/vector-norm"/>
   </jet>
 
-  <!-- Exterieur gauche -->
+  <!-- Exterior left -->
   <jet x="39.722" y="11.582" z="-3.599"
        mass="640"
        thrust="25000"
@@ -144,7 +161,7 @@
        <control-output control="VECTOR" prop="/engines/engine[3]/vector-norm"/>
   </jet>
 
-  <!-- Interieur droit -->
+  <!-- Interio right -->
   <jet x="39.722" y="-5.882" z="-3.599"
        mass="640"
        thrust="25000"
@@ -175,7 +192,7 @@
        <control-output control="VECTOR" prop="/engines/engine[6]/vector-norm"/>
   </jet>
 
-  <!-- Exterieur droit -->
+  <!-- Exterior right -->
   <jet x="39.722" y="-11.582" z="-3.599"
        mass="640"
        thrust="25000"
@@ -186,7 +203,7 @@
        <control-output control="VECTOR" prop="/engines/engine[7]/vector-norm"/>
   </jet>
 
-  <!-- Moteurs arrieres -->
+  <!-- Rear engine left 8 -->
   <jet x="-34.450" y="1.658" z="0.618"
        mass="640"
        thrust="25000">
@@ -194,6 +211,7 @@
        <control-input axis="/controls/engines/engine[8]/throttle" control="THROTTLE"/>
   </jet>
 
+  <!-- Rear engine right 9 -->
   <jet x="-34.450" y="-1.658" z="0.618"
        mass="640"
        thrust="25000">
@@ -250,8 +268,7 @@
         reduce-friction-by-extension="1.5">
   </gear>
 
-  <tank x="9" y="10" z="-7" capacity="20258"/>
+  <tank x="9" y=" 10" z="-7" capacity="20258"/>
   <tank x="9" y="-10" z="-7" capacity="20258"/>
 
 </airplane>
-
