@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <!-- Noze left -->
+  <model>
+    <path>Aircraft/KM/Models/Effects/Water/tail.xml</path>
+    <offsets>
+      <x-m> -31.552 </x-m>
+      <y-m>  -2.708 </y-m>
+      <z-m>  -9.025 </z-m>
+      <pitch-deg>   -30 </pitch-deg>
+      <heading-deg> -40 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Noze right -->
+  <model>
+    <path>Aircraft/KM/Models/Effects/Water/tail.xml</path>
+    <offsets>
+      <x-m> -31.552 </x-m>
+      <y-m>   2.708 </y-m>
+      <z-m>  -9.025 </z-m>
+      <pitch-deg>  -30 </pitch-deg>
+      <heading-deg> 40 </heading-deg>
+    </offsets>
+  </model> 
+
+  <!-- Tail -->
+  <model>
+    <path>Aircraft/KM/Models/Effects/Water/tail.xml</path>
+    <offsets>
+      <x-m> 32.938 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -8.698 </z-m>
+      <pitch-deg> -30 </pitch-deg>
+    </offsets>
+  </model> 
+
+  <!-- Left float -->
+  <model>
+    <path>Aircraft/KM/Models/Effects/Water/floatG.xml</path>
+    <offsets>
+      <x-m>  -2.500 </x-m>
+      <y-m> -19.225 </y-m>
+      <z-m>  -9.641 </z-m>
+      <pitch-deg> -30 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Right float -->
+  <model>
+    <path>Aircraft/KM/Models/Effects/Water/floatD.xml</path>
+    <offsets>
+      <x-m> -2.500 </x-m>
+      <y-m> 19.225 </y-m>
+      <z-m> -9.641 </z-m>
+      <pitch-deg> -30 </pitch-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

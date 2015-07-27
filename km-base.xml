@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
-  <sim include="Nasal/views.xml">
+  <sim include="Systems/views.xml">
 
+    <description>Caspian Sea Monster (YASim)</description>
     <author>BARANGER Emmanuel (3D/FDM)</author>
-    <aircraft-version>0.1</aircraft-version>
+    <aircraft-version>0.2</aircraft-version>
     <status>Alpha</status>
 
-    <fuel-fraction>1.0</fuel-fraction>
+    <fuel-fraction> 1 </fuel-fraction>
 
     <type type="string">seaplane</type>
 
@@ -27,42 +28,44 @@
       </livery>
     </model>
 
-    <panel>
-      <visibility archive="y">false</visibility>
-    </panel>
-
     <multiplay>
       <chat_display>1</chat_display>
-      <generic>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
-        <int type="int">0</int>
+      <generic> 
+        <int type="int" n="0">0</int>                                         <!--  0 immat -->
+        <int type="int" n="1">0</int>                                         <!--  1 immat -->
+        <int type="int" n="2">0</int>                                         <!--  2 immat -->
+        <int type="int" n="3">0</int>                                         <!--  3 immat -->
+        <int type="int" n="4">0</int>                                         <!--  4 immat -->
+        <int type="int" n="5">0</int>                                         <!--  5 immat -->
+        <int type="bool" n="6" alias="/sim/model/hide-yoke">true1</int>       <!--  6 Hide Yoke -->
+        <int type="int" n="7">0</int>                                         <!--  7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">0</int>     <!--  8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">false</int>         <!--  9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">0</int>                <!-- 10 key position -->
+        <float n="0" alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1" alias="/sim/model/door-positions/pasanger/position-norm"/>  
+        <float n="2" alias="/position/gear-agl-m">0</float>                   <!--  2 altitude for MP shadow -->
+        <float n="3" alias="/position/altitude-ft">0</float>                  <!--  3 altitude for trail -->
+        <float n="4"  alias="/gear/gear[0]/wow/"/>
+        <float n="5"  alias="/gear/gear[1]/wow/"/>
+        <float n="6"  alias="/gear/gear[2]/wow/"/>
+        <float n="7"  alias="/gear/gear[3]/wow/"/>
+        <float n="8"  alias="/gear/gear[4]/wow/"/>
+        <float n="11" alias="/gear/gear[5]/wow/"/>
+        <!-- For Bombable -->
+        <string n="0" type="string"/>
+        <string n="9" type="string"/>
       </generic>
     </multiplay>
-
-    <help>
-      <title>Caspian Sea Monster</title>
-      <key>
-        <name>m/M</name>
-        <desc>Deflectors</desc>
-      </key>
-    </help>
+    
+    <help include="Systems/help.xml"/>
 
   </sim>
 
-  <controls>
-    <flight>
-      <elevator-trim type="double"> 0 </elevator-trim>
-    </flight>
-  </controls>
+  <input include="Systems/km-keyboard.xml"/>
+    
+  <controls include="Systems/controls.xml"/>
 
-  <input>
-    <keyboard include="Nasal/km-keyboard.xml"/>
-  </input>
- 
   <nasal>
     <km>
       <file>Aircraft/KM/Nasal/light.nas</file>
@@ -75,4 +78,3 @@
   </nasal>
   
 </PropertyList>
-
